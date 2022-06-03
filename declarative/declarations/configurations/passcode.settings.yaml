@@ -5,6 +5,14 @@ payload:
   supportedOS:
     iOS:
       introduced: '15.0'
+      sharedipad:
+        mode: forbidden
+    macOS:
+      introduced: '13.0'
+      userenrollment:
+        mode: forbidden
+    tvOS:
+      introduced: n/a
 payloadkeys:
 - key: RequirePasscode
   title: Require Passcode on Device

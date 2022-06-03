@@ -117,3 +117,27 @@ payloadkeys:
     type: <string>
     presence: required
     content: The bundle identifier of the app.
+- key: AuthenticationMethod
+  supportedOS:
+    iOS:
+      introduced: n/a
+    macOS:
+      introduced: '13.0'
+  type: <string>
+  presence: optional
+  rangelist:
+  - Password
+  - UserSecureEnclaveKey
+  content: The Platform SSO authentication method to be used with the extension.  Requires
+    that the SSO Extension also support the method.
+- key: RegistrationToken
+  supportedOS:
+    iOS:
+      introduced: n/a
+    macOS:
+      introduced: '13.0'
+  type: <string>
+  presence: optional
+  content: The token to be used by this device for registration with Platform SSO.  It
+    can be used for silent registration with the Identity Provider. Requires that
+    'AuthenticationMethod' is set.

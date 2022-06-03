@@ -5,6 +5,16 @@ payload:
   supportedOS:
     iOS:
       introduced: '15.0'
+      sharedipad:
+        mode: allowed
+        devicechannel: false
+        userchannel: true
+    macOS:
+      introduced: '13.0'
+      devicechannel: false
+      userchannel: true
+    tvOS:
+      introduced: n/a
   content: An email configuration defines an email account for a user.
 payloadkeys:
 - key: VisibleName

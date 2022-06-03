@@ -4,6 +4,7 @@ payload:
   supportedOS:
     macOS:
       introduced: '10.7'
+      deprecated: '13.0'
       devicechannel: true
       userchannel: true
       requiresdep: false
@@ -12,7 +13,7 @@ payload:
       userenrollment:
         mode: forbidden
   content: |-
-    Hide and show individual System Preference panes.
+    Hide and show individual System Preferences panes.
     The following preference pane items are no longer supported on macOS 10.14:
     • com.apple.preferences.appstore
     The following preference pane items are no longer supported on macOS 10.15:

@@ -181,3 +181,14 @@ payloadkeys:
         * '2': IPv6
         * '3': Both
         Available in iOS 10.3 and later.
+    - key: EnableXLAT464
+      title: Enable XLAT464
+      supportedOS:
+        iOS:
+          introduced: '16.0'
+        watchOS:
+          introduced: '9.0'
+      type: <boolean>
+      presence: optional
+      default: false
+      content: Enables XLAT464. If not specified, the system default is used.

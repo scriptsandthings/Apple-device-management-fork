@@ -342,6 +342,40 @@ payloadkeys:
       type: <string>
       presence: required
       content: A host or domain name in the format of [protocol/]hostname[:port][/path]
+  - key: usePlatformSSOTGT
+    supportedOS:
+      iOS:
+        introduced: n/a
+      macOS:
+        introduced: '13.0'
+    type: <boolean>
+    presence: optional
+    default: false
+    content: Require that this configuration use a TGT from Platform SSO instead of
+      requesting a new one.
+  - key: allowPlatformSSOAuthFallback
+    supportedOS:
+      iOS:
+        introduced: n/a
+      macOS:
+        introduced: '13.0'
+    type: <boolean>
+    presence: optional
+    default: true
+    content: Allow the user to manually sign in the when 'usePlatformSSOTGT' is 'true'.
+  - key: performKerberosOnly
+    supportedOS:
+      iOS:
+        introduced: '16.0'
+      macOS:
+        introduced: '13.0'
+    type: <boolean>
+    presence: optional
+    default: false
+    content: If set to 'true', then the Kerberos Extension will handle Kerberos requests
+      only.  It will not check for password expiration, show the password expiration
+      in the menu extra, check for external password changes, perform password sync,
+      or retrieve the home directory.
 - key: Hosts
   type: <array>
   presence: optional

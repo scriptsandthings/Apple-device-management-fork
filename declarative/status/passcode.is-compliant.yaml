@@ -1,0 +1,17 @@
+title: Status Passcode Compliance
+description: The state of passcode compliance.
+payload:
+  statusitemtype: passcode.is-compliant
+  supportedOS:
+    iOS:
+      introduced: '16.0'
+    macOS:
+      introduced: n/a
+    tvOS:
+      introduced: n/a
+payloadkeys:
+- key: passcode.is-compliant
+  title: Status item value.
+  type: <boolean>
+  presence: required
+  content: Status value.

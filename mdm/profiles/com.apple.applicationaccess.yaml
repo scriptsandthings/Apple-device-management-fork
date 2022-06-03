@@ -555,6 +555,8 @@ payloadkeys:
     iOS:
       introduced: '5.0'
       supervised: true
+      sharedipad:
+        mode: forbidden
       userenrollment:
         mode: forbidden
     macOS:
@@ -1800,7 +1802,9 @@ payloadkeys:
       userenrollment:
         mode: forbidden
     macOS:
-      introduced: n/a
+      introduced: '13.0'
+      userenrollment:
+        mode: forbidden
     tvOS:
       introduced: n/a
   type: <boolean>
@@ -1809,6 +1813,21 @@ payloadkeys:
   content: If 'false', prohibits the user from installing configuration profiles and
     certificates interactively. Requires a supervised device. Available in iOS 6 and
     later.
+- key: allowUniversalControl
+  title: Allow Universal Control
+  supportedOS:
+    iOS:
+      introduced: n/a
+    macOS:
+      introduced: '13.0'
+      userenrollment:
+        mode: forbidden
+    tvOS:
+      introduced: n/a
+  type: <boolean>
+  presence: optional
+  default: true
+  content: If set to false, Universal Control is disabled.
 - key: allowUnmanagedToReadManagedContacts
   title: Allow unmanaged apps to read managed contacts accounts
   supportedOS:
@@ -1866,7 +1885,9 @@ payloadkeys:
       userenrollment:
         mode: forbidden
     macOS:
-      introduced: n/a
+      introduced: '13.0'
+      userenrollment:
+        mode: forbidden
     tvOS:
       introduced: n/a
   type: <boolean>
